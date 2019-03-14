@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F03%2F14%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start123123123123dwefefewf// 2.实现大整数相加算法，两个数用字符串模拟函数原型：function add(a, b) { } // 第二题的测试用例如下： // 用例1: console.log(add(‘999’, ‘1’) === ‘1000’); // 用例2: console.log(add(‘1’, ‘999’) === ‘1000’); // 用例3: console.log(add(‘123’, ‘123’) === ‘246’); function add(a,b){ let str1 = a.split(‘’) let str2 = b.split(‘’) let c = 0]]></content>
+    <title><![CDATA[article title]]></title>
+    <url>%2F2019%2F03%2F14%2Farticle-title-2%2F</url>
+    <content type="text"><![CDATA[hahahaCreate a new post123123123123dwefefewf // 2.实现大整数相加算法，两个数用字符串模拟函数原型：function add(a, b) { } // 第二题的测试用例如下： // 用例1: console.log(add(‘999’, ‘1’) === ‘1000’); // 用例2: console.log(add(‘1’, ‘999’) === ‘1000’); // 用例3: console.log(add(‘123’, ‘123’) === ‘246’); function add(a,b){ let str1 = a.split(‘’) let str2 = b.split(‘’) let c = 0]]></content>
       <tags>
         <tag>bad</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[article title]]></title>
-    <url>%2F2019%2F03%2F14%2Farticle-title-2%2F</url>
-    <content type="text"><![CDATA[hahahaCreate a new post123123123123dwefefewf // 2.实现大整数相加算法，两个数用字符串模拟函数原型：function add(a, b) { } // 第二题的测试用例如下： // 用例1: console.log(add(‘999’, ‘1’) === ‘1000’); // 用例2: console.log(add(‘1’, ‘999’) === ‘1000’); // 用例3: console.log(add(‘123’, ‘123’) === ‘246’); function add(a,b){ let str1 = a.split(‘’) let str2 = b.split(‘’) let c = 0]]></content>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F14%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start123123123123dwefefewf// 2.实现大整数相加算法，两个数用字符串模拟函数原型：function add(a, b) { } // 第二题的测试用例如下： // 用例1: console.log(add(‘999’, ‘1’) === ‘1000’); // 用例2: console.log(add(‘1’, ‘999’) === ‘1000’); // 用例3: console.log(add(‘123’, ‘123’) === ‘246’); function add(a,b){ let str1 = a.split(‘’) let str2 = b.split(‘’) let c = 0]]></content>
       <tags>
         <tag>bad</tag>
       </tags>
