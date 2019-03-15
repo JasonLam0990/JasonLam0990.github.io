@@ -1,35 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[article title]]></title>
-    <url>%2F2019%2F03%2F14%2Farticle-title-2%2F</url>
-    <content type="text"><![CDATA[hahahaCreate a new post123123123123dwefefewf // 2.实现大整数相加算法，两个数用字符串模拟函数原型：function add(a, b) { } // 第二题的测试用例如下： // 用例1: console.log(add(‘999’, ‘1’) === ‘1000’); // 用例2: console.log(add(‘1’, ‘999’) === ‘1000’); // 用例3: console.log(add(‘123’, ‘123’) === ‘246’); function add(a,b){ let str1 = a.split(‘’) let str2 = b.split(‘’) let c = 0]]></content>
+    <title><![CDATA[Hello Blog]]></title>
+    <url>%2F2019%2F03%2F15%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[第一篇文章，还是挺有纪念意义的hhh其实我想有一个自己的博客好久了，但是一直都想的是自己用Vue或React写前端，用Koa或者Express之类的写个后台也因为想的这么复杂，所以学习速度也跟不上，迟迟没把博客搭起来现在准备春招秋招，还是需要有一个存放知识归纳文章的地方，索性就用Github Pages + Hexo解决了，感觉也挺好希望你喜欢这个博客，并能从中有所收获。如有错误的地方，也请批评指正]]></content>
       <tags>
-        <tag>bad</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F03%2F14%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start123123123123dwefefewf// 2.实现大整数相加算法，两个数用字符串模拟函数原型：function add(a, b) { } // 第二题的测试用例如下： // 用例1: console.log(add(‘999’, ‘1’) === ‘1000’); // 用例2: console.log(add(‘1’, ‘999’) === ‘1000’); // 用例3: console.log(add(‘123’, ‘123’) === ‘246’); function add(a,b){ let str1 = a.split(‘’) let str2 = b.split(‘’) let c = 0]]></content>
-      <tags>
-        <tag>bad</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[article title]]></title>
-    <url>%2F2019%2F03%2F14%2Farticle-title-1%2F</url>
-    <content type="text"><![CDATA[123123123123Create a new post 1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <tags>
-        <tag>good</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[article title]]></title>
-    <url>%2F2019%2F03%2F14%2Farticle-title%2F</url>
-    <content type="text"><![CDATA[123123123123dwefefewf// 2.实现大整数相加算法，两个数用字符串模拟函数原型：function add(a, b) { } // 第二题的测试用例如下： // 用例1: console.log(add(‘999’, ‘1’) === ‘1000’); // 用例2: console.log(add(‘1’, ‘999’) === ‘1000’); // 用例3: console.log(add(‘123’, ‘123’) === ‘246’); function add(a,b){ let str1 = a.split(‘’) let str2 = b.split(‘’) let c = 0 let res = ‘’ while(str1.length || str2.length || c){ c += ~~str1.pop() + ~~str2.pop() res += c%10 c = c &gt; 9 } return res.split(‘’).reverse().join(‘’)} console.log(add(‘999’, ‘1’) === ‘1000’)console.log(add(‘1’, ‘999’) === ‘1000’)console.log(add(‘123’, ‘123’) === ‘246’)console.log(add(‘999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999’, ‘1’) === ‘1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000’);]]></content>
-      <tags>
-        <tag>good</tag>
+        <tag>胡言乱语</tag>
       </tags>
   </entry>
 </search>

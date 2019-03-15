@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>JasonLam&#39;s Blog</title>
+  
+  <subtitle>Just Enjoy It!</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="JasonLam0990.github.io/"/>
+  <updated>2019-03-15T02:04:30.358Z</updated>
+  <id>JasonLam0990.github.io/</id>
+  
+  <author>
+    <name>JasonLam</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello Blog</title>
+    <link href="JasonLam0990.github.io/2019/03/15/hello-world/"/>
+    <id>JasonLam0990.github.io/2019/03/15/hello-world/</id>
+    <published>2019-03-15T02:03:48.000Z</published>
+    <updated>2019-03-15T02:04:30.358Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>第一篇文章，还是挺有纪念意义的hhh<br>其实我想有一个自己的博客好久了，但是一直都想的是自己用Vue或React写前端，用Koa或者Express之类的写个后台<br>也因为想的这么复杂，所以学习速度也跟不上，迟迟没把博客搭起来<br>现在准备春招秋招，还是需要有一个存放知识归纳文章的地方，索性就用Github Pages + Hexo解决了，感觉也挺好<br>希望你喜欢这个博客，并能从中有所收获。如有错误的地方，也请批评指正</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;第一篇文章，还是挺有纪念意义的hhh&lt;br&gt;其实我想有一个自己的博客好久了，但是一直都想的是自己用Vue或React写前端，用Koa或者Express之类的写个后台&lt;br&gt;也因为想的这么复杂，所以学
+      
+    
+    </summary>
+    
+    
+      <category term="胡言乱语" scheme="JasonLam0990.github.io/tags/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+</feed>
