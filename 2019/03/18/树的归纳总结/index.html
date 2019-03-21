@@ -2,15 +2,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
   
 
 
@@ -18,7 +9,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -29,6 +20,8 @@
 
 
 
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -43,68 +36,11 @@
 
 
 
+
+
+  
   
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open Sans:300,300italic,400,400italic,700,700italic|Open Sans:300,300italic,400,400italic,700,700italic|Gloria Hallelujah:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
-  
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=7.0.1">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -112,37 +48,40 @@
 
 
 
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '7.0.1',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
 
-  <meta name="description" content="树是一种非线性表结构，比线性表的数据结构要复杂得多。我将按照树、二叉树、二叉查找树的顺序来复习以及做相关习题，红黑树的话感觉前端似乎可以暂时不用涉及这么深？我就先不总结归纳这一部分了。">
+
+  <meta name="keywords" content="树,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JasonLam's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="树是一种非线性表结构，比线性表的数据结构要复杂得多。我将按照树、二叉树、二叉查找树的顺序来复习以及做相关习题，红黑树的话感觉前端似乎可以暂时不用涉及这么深？我就先不总结归纳这一部分了。">
 <meta name="keywords" content="树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树的归纳总结">
@@ -157,8 +96,29 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="JasonLam's Blog" type="application/atom+xml">
-
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
 
 
@@ -166,11 +126,7 @@
 
 
 
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
+
 
   <title>树的归纳总结 | JasonLam's Blog</title>
   
@@ -181,35 +137,6 @@
 
 
 
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
 
 </head>
 
@@ -225,7 +152,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
+  <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
@@ -235,16 +162,13 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
       
         <p class="site-subtitle">Just Enjoy It!</p>
       
-    
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -252,156 +176,78 @@
   </div>
 </div>
 
-
-
 <nav class="site-nav">
+  
+
   
     <ul id="menu" class="menu">
       
         
-        
-        
-          
-          <li class="menu-item menu-item-首页">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-分类">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-标签">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-归档">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-关于">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
-
-  </li>
-
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
         </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
       
     </ul>
   
 
   
-    
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
 
 
 
-  
-
-
-
-</div>
+ </div>
     </header>
-
-    
-
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
           <div id="content" class="content">
             
 
@@ -414,8 +260,6 @@
   
   
 
-  
-
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -425,7 +269,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JasonLam">
-      <meta itemprop="description" content="JasonLam个人站，主要用来记录前端知识总结～">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
@@ -438,39 +282,25 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">树的归纳总结
-
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">树的归纳总结</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-
-              
-                
-              
-
-              <time title="Created: 2019-03-18 09:14:45 / Modified: 15:13:02" itemprop="dateCreated datePublished" datetime="2019-03-18T09:14:45+08:00">2019-03-18</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T09:14:45+08:00">
+                2019-03-18
+              </time>
             
 
             
-              
 
-              
             
           </span>
 
@@ -483,10 +313,14 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
 
                 
                 
@@ -496,7 +330,6 @@
 
           
             
-            
           
 
           
@@ -507,7 +340,9 @@
           
 
           
-            <div class="post-description">树是一种非线性表结构，比线性表的数据结构要复杂得多。我将按照树、二叉树、二叉查找树的顺序来复习以及做相关习题，红黑树的话感觉前端似乎可以暂时不用涉及这么深？我就先不总结归纳这一部分了。</div>
+              <div class="post-description">
+                  树是一种非线性表结构，比线性表的数据结构要复杂得多。我将按照树、二叉树、二叉查找树的顺序来复习以及做相关习题，红黑树的话感觉前端似乎可以暂时不用涉及这么深？我就先不总结归纳这一部分了。
+              </div>
           
 
         </div>
@@ -556,11 +391,14 @@
 
 <h4 id="非递归实现"><a href="#非递归实现" class="headerlink" title="非递归实现"></a>非递归实现</h4><h5 id="思路：前序遍历为-根-左-右-，主要任务就是用自己定义的栈来代替系统栈的功能。首先根节点入栈，进入while循环，如果栈不为空，则取出栈顶元素并访问，然后将栈顶元素的左右节点入栈，要注意顺序，右节点先入栈，左节点后入栈。则左节点先出栈，右节点后出栈，符合-根-左-右-的顺序。"><a href="#思路：前序遍历为-根-左-右-，主要任务就是用自己定义的栈来代替系统栈的功能。首先根节点入栈，进入while循环，如果栈不为空，则取出栈顶元素并访问，然后将栈顶元素的左右节点入栈，要注意顺序，右节点先入栈，左节点后入栈。则左节点先出栈，右节点后出栈，符合-根-左-右-的顺序。" class="headerlink" title="思路：前序遍历为 根-左-右 ，主要任务就是用自己定义的栈来代替系统栈的功能。首先根节点入栈，进入while循环，如果栈不为空，则取出栈顶元素并访问，然后将栈顶元素的左右节点入栈，要注意顺序，右节点先入栈，左节点后入栈。则左节点先出栈，右节点后出栈，符合 根-左-右 的顺序。"></a>思路：前序遍历为 根-左-右 ，主要任务就是用自己定义的栈来代替系统栈的功能。首先根节点入栈，进入while循环，如果栈不为空，则取出栈顶元素并访问，然后将栈顶元素的左右节点入栈，要注意顺序，右节点先入栈，左节点后入栈。则左节点先出栈，右节点后出栈，符合 根-左-右 的顺序。</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">preOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        <span class="keyword">let</span> stack = [root]      <span class="comment">//新建栈，并将根结点root入栈            </span></span><br><span class="line">        <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span>)&#123;              <span class="comment">//当栈不为空</span></span><br><span class="line">            <span class="keyword">let</span> topNode = stack.pop()       <span class="comment">//取栈顶元素</span></span><br><span class="line">            <span class="built_in">console</span>.log(topNode)            <span class="comment">//访问</span></span><br><span class="line">            <span class="keyword">if</span>(topNode.right)&#123;     <span class="comment">//若右节点存在，入栈</span></span><br><span class="line">                stack.push(topNode.right)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(topNode.left)&#123;      <span class="comment">//若左节点存在，入栈</span></span><br><span class="line">                stack.push(topNode.left) </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="LeetCode对应习题144"><a href="#LeetCode对应习题144" class="headerlink" title="LeetCode对应习题144"></a>LeetCode对应习题144</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/<strong></strong></span></span><br><span class="line"><span class="comment"><em> Definition for a binary tree node.</em></span></span><br><span class="line"><span class="comment"> function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"><em>     this.val = val;</em></span></span><br><span class="line"><span class="comment">     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"><em> &#125;</em></span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment"><em> @param &#123;TreeNode&#125; root</em></span></span><br><span class="line"><span class="comment"> @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> preorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">let</span> stack = [root]</span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> node = stack.pop()</span><br><span class="line">        res.push(node.val)</span><br><span class="line">        <span class="keyword">if</span>(node.right)&#123;</span><br><span class="line">            stack.push(node.right)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(node.left)&#123;</span><br><span class="line">            stack.push(node.left)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="-2"><h4 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        preOrder(root.left)</span><br><span class="line">        <span class="built_in">console</span>.log(root)</span><br><span class="line">        preOrder(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="LeetCode对应习题144"><a href="#LeetCode对应习题144" class="headerlink" title="LeetCode对应习题144"></a>LeetCode对应习题144</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/<strong></strong></span></span><br><span class="line"><span class="comment"><em> Definition for a binary tree node.</em></span></span><br><span class="line"><span class="comment"> function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"><em>     this.val = val;</em></span></span><br><span class="line"><span class="comment">     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"><em> &#125;</em></span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment"><em> @param &#123;TreeNode&#125; root</em></span></span><br><span class="line"><span class="comment"> @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> preorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">let</span> stack = [root]</span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> node = stack.pop()</span><br><span class="line">        res.push(node.val)</span><br><span class="line">        <span class="keyword">if</span>(node.right)&#123;</span><br><span class="line">            stack.push(node.right)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(node.left)&#123;</span><br><span class="line">            stack.push(node.left)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</div><div class="tab-pane" id="-2"><h4 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        preOrder(root.left)</span><br><span class="line">        <span class="built_in">console</span>.log(root)</span><br><span class="line">        preOrder(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="非递归实现"><a href="#非递归实现" class="headerlink" title="非递归实现"></a>非递归实现</h4><h5 id="思路：中序遍历为-左-根-右-，首先将游标指向根节点，然后一直向左下遍历并入栈，直到找到最左的。此时再开始回溯，如果栈不为空，则取出栈顶元素并访问，然后将游标指向当前游标位置的右节点，如果右节点为空则无操作，若不为空，则右节点（其实就类似我们最初的根节点了）入栈，并继续按照找最左的方式遍历并入栈，如此往复。直到最终栈为空，进入终态。"><a href="#思路：中序遍历为-左-根-右-，首先将游标指向根节点，然后一直向左下遍历并入栈，直到找到最左的。此时再开始回溯，如果栈不为空，则取出栈顶元素并访问，然后将游标指向当前游标位置的右节点，如果右节点为空则无操作，若不为空，则右节点（其实就类似我们最初的根节点了）入栈，并继续按照找最左的方式遍历并入栈，如此往复。直到最终栈为空，进入终态。" class="headerlink" title="思路：中序遍历为 左-根-右 ，首先将游标指向根节点，然后一直向左下遍历并入栈，直到找到最左的。此时再开始回溯，如果栈不为空，则取出栈顶元素并访问，然后将游标指向当前游标位置的右节点，如果右节点为空则无操作，若不为空，则右节点（其实就类似我们最初的根节点了）入栈，并继续按照找最左的方式遍历并入栈，如此往复。直到最终栈为空，进入终态。"></a>思路：中序遍历为 左-根-右 ，首先将游标指向根节点，然后一直向左下遍历并入栈，直到找到最左的。此时再开始回溯，如果栈不为空，则取出栈顶元素并访问，然后将游标指向当前游标位置的右节点，如果右节点为空则无操作，若不为空，则右节点（其实就类似我们最初的根节点了）入栈，并继续按照找最左的方式遍历并入栈，如此往复。直到最终栈为空，进入终态。</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        <span class="keyword">let</span> stack = []</span><br><span class="line">        <span class="keyword">let</span> cursor = root                   <span class="comment">//游标指向根节点</span></span><br><span class="line">        <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span> || cursor)&#123;  </span><br><span class="line"></span><br><span class="line">            <span class="comment">// 在根节点的左子树遍历完后，根节点出栈并访问，游标指向根节点的右节点时，此时栈是为空的，为了防止遍历停止，</span></span><br><span class="line">            <span class="comment">// 加上cursor !== null 来判断此时右子树是否为空。若此时仍有右子树，则为真，可继续维持循环的进行。</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(cursor)&#123;         <span class="comment">//左子树存在，则入栈</span></span><br><span class="line">                stack.push(cursor)</span><br><span class="line">                cursor = cursor.left</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// let node = stack.pop()      //取出栈顶元素</span></span><br><span class="line">            <span class="comment">// console.log(node)           //访问      </span></span><br><span class="line">            <span class="comment">// if(node.right)&#123;</span></span><br><span class="line">            <span class="comment">//     cursor = node.right</span></span><br><span class="line">            <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">            cursor = stack.pop()</span><br><span class="line">            res.push(cursor.val)</span><br><span class="line">            cursor = cursor.right</span><br><span class="line">            <span class="comment">//此处两种写法都可以，但是后者似乎更直观</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="LeetCode对应习题94"><a href="#LeetCode对应习题94" class="headerlink" title="LeetCode对应习题94"></a>LeetCode对应习题94</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/<strong></strong></span></span><br><span class="line"><span class="comment"><em> Definition for a binary tree node.</em></span></span><br><span class="line"><span class="comment"> function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"><em>     this.val = val;</em></span></span><br><span class="line"><span class="comment">     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"><em> &#125;</em></span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment"><em> @param &#123;TreeNode&#125; root</em></span></span><br><span class="line"><span class="comment"> @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> inorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">let</span> stack = []</span><br><span class="line">    <span class="keyword">let</span> cursor = root</span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span> || cursor)&#123;</span><br><span class="line">        <span class="keyword">while</span>(cursor)&#123;</span><br><span class="line">            stack.push(cursor)</span><br><span class="line">            cursor = cursor.left</span><br><span class="line">        &#125;</span><br><span class="line">        cursor = stack.pop()</span><br><span class="line">        res.push(cursor.val)</span><br><span class="line">        cursor = cursor.right</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="-3"><h4 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">postOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        preOrder(root.left)</span><br><span class="line">        preOrder(root.right)</span><br><span class="line">        <span class="built_in">console</span>.log(root)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="LeetCode对应习题94"><a href="#LeetCode对应习题94" class="headerlink" title="LeetCode对应习题94"></a>LeetCode对应习题94</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/<strong></strong></span></span><br><span class="line"><span class="comment"><em> Definition for a binary tree node.</em></span></span><br><span class="line"><span class="comment"> function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"><em>     this.val = val;</em></span></span><br><span class="line"><span class="comment">     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"><em> &#125;</em></span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment"><em> @param &#123;TreeNode&#125; root</em></span></span><br><span class="line"><span class="comment"> @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> inorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">let</span> stack = []</span><br><span class="line">    <span class="keyword">let</span> cursor = root</span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span> || cursor)&#123;</span><br><span class="line">        <span class="keyword">while</span>(cursor)&#123;</span><br><span class="line">            stack.push(cursor)</span><br><span class="line">            cursor = cursor.left</span><br><span class="line">        &#125;</span><br><span class="line">        cursor = stack.pop()</span><br><span class="line">        res.push(cursor.val)</span><br><span class="line">        cursor = cursor.right</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+</div><div class="tab-pane" id="-3"><h4 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">postOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        preOrder(root.left)</span><br><span class="line">        preOrder(root.right)</span><br><span class="line">        <span class="built_in">console</span>.log(root)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="非递归实现"><a href="#非递归实现" class="headerlink" title="非递归实现"></a>非递归实现</h4><h5 id="思路：前序遍历为-根-左-右-，而后序遍历为-左-右-根，那么我们只需要交换前序遍历时对左右子树的遍历顺序，则变为-根-右-左，然后再逆序，则为我们需要的后序遍历-左-右-根-啦！"><a href="#思路：前序遍历为-根-左-右-，而后序遍历为-左-右-根，那么我们只需要交换前序遍历时对左右子树的遍历顺序，则变为-根-右-左，然后再逆序，则为我们需要的后序遍历-左-右-根-啦！" class="headerlink" title="思路：前序遍历为 根-左-右 ，而后序遍历为 左-右-根，那么我们只需要交换前序遍历时对左右子树的遍历顺序，则变为 根-右-左，然后再逆序，则为我们需要的后序遍历 左-右-根 啦！"></a>思路：前序遍历为 根-左-右 ，而后序遍历为 左-右-根，那么我们只需要交换前序遍历时对左右子树的遍历顺序，则变为 根-右-左，然后再逆序，则为我们需要的后序遍历 左-右-根 啦！</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">postOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        <span class="keyword">let</span> stack1 = [root]     <span class="comment">//新建栈，并将根结点root入栈</span></span><br><span class="line">        <span class="keyword">let</span> stack2 = []</span><br><span class="line">        <span class="keyword">while</span>(stack1.length &gt; <span class="number">0</span>)&#123;              <span class="comment">//当栈不为空</span></span><br><span class="line">            <span class="keyword">let</span> topNode = stack1.pop()       <span class="comment">//取栈顶元素</span></span><br><span class="line">            stack2.push(topNode)            <span class="comment">//访问</span></span><br><span class="line">            <span class="keyword">if</span>(topNode.left)&#123;      <span class="comment">//若左节点存在，入栈</span></span><br><span class="line">                stack1.push(topNode.left) </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(topNode.right)&#123;     <span class="comment">//若右节点存在，入栈</span></span><br><span class="line">                stack1.push(topNode.right)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(stack2.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(stack2.pop())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -568,9 +406,14 @@
 
 <h5 id="解法二-深度优先搜索法（队列）"><a href="#解法二-深度优先搜索法（队列）" class="headerlink" title="解法二 深度优先搜索法（队列）"></a>解法二 深度优先搜索法（队列）</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/<strong></strong></span></span><br><span class="line"><span class="comment"><em> Definition for a binary tree node.</em></span></span><br><span class="line"><span class="comment"> function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"><em>     this.val = val;</em></span></span><br><span class="line"><span class="comment">     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"><em> &#125;</em></span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment"><em> @param &#123;TreeNode&#125; root</em></span></span><br><span class="line"><span class="comment"> @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> postorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (!root) <span class="keyword">return</span> [];</span><br><span class="line"><span class="keyword">const</span> queue = [root];</span><br><span class="line"><span class="keyword">const</span> res = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (queue.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> node = queue.shift();</span><br><span class="line">    res.unshift(node.val);</span><br><span class="line">    <span class="keyword">if</span> (node.left) queue.unshift(node.left);</span><br><span class="line">    <span class="keyword">if</span> (node.right) queue.unshift(node.right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<div class="note default"><p>其实还有一种一个栈实现的非递归方法，但是最近有好几个面试，只得加快归纳总结的速度，不能覆盖到了，以后有时间了再补回来吧～</p></div></div><div class="tab-pane" id="-4"><h4 id="使用队列实现"><a href="#使用队列实现" class="headerlink" title="使用队列实现"></a>使用队列实现</h4><h5 id="思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～"><a href="#思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～" class="headerlink" title="思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～"></a>思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">levelOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        <span class="keyword">let</span> queue = [root]              <span class="comment">//新建队列，并将root入队</span></span><br><span class="line">        <span class="keyword">while</span>(queue.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">let</span> top = queue.shift()</span><br><span class="line">            <span class="built_in">console</span>.log(top)</span><br><span class="line">            <span class="keyword">if</span>(top.left)&#123;</span><br><span class="line">                queue.push(top.left)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(top.right)&#123;</span><br><span class="line">                queue.push(top.right)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="note default"><p>其实还有一种一个栈实现的非递归方法，但是最近有好几个面试，只得加快归纳总结的速度，不能覆盖到了，以后有时间了再补回来吧～</p></div>
 
-<h4 id="LeetCode对应习题102"><a href="#LeetCode对应习题102" class="headerlink" title="LeetCode对应习题102"></a>LeetCode对应习题102</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/<strong></strong></span></span><br><span class="line"><span class="comment"><em> Definition for a binary tree node.</em></span></span><br><span class="line"><span class="comment"> function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"><em>     this.val = val;</em></span></span><br><span class="line"><span class="comment">     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"><em> &#125;</em></span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment"><em> @param &#123;TreeNode&#125; root</em></span></span><br><span class="line"><span class="comment"> @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">let</span> queue = [root]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(queue.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> len = queue.length</span><br><span class="line">        <span class="keyword">let</span> current = []</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">let</span> node = queue.shift()</span><br><span class="line">            current.push(node.val)</span><br><span class="line">            <span class="keyword">if</span> (node.left) &#123;</span><br><span class="line">                queue.push(node.left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (node.right) &#123;</span><br><span class="line">                queue.push(node.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res.push(current)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+
+</div><div class="tab-pane" id="-4"><h4 id="使用队列实现"><a href="#使用队列实现" class="headerlink" title="使用队列实现"></a>使用队列实现</h4><h5 id="思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～"><a href="#思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～" class="headerlink" title="思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～"></a>思路：队伍先进先出，首先根节点入队，然后进入while循环，若队列不为空，则队列最前端出队并访问，同时将其左右节点依次如队，若为空则无操作，输出结果则为层次遍历～</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">levelOrder</span>(<span class="params">root</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root)&#123;</span><br><span class="line">        <span class="keyword">let</span> queue = [root]              <span class="comment">//新建队列，并将root入队</span></span><br><span class="line">        <span class="keyword">while</span>(queue.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">let</span> top = queue.shift()</span><br><span class="line">            <span class="built_in">console</span>.log(top)</span><br><span class="line">            <span class="keyword">if</span>(top.left)&#123;</span><br><span class="line">                queue.push(top.left)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(top.right)&#123;</span><br><span class="line">                queue.push(top.right)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="LeetCode对应习题102"><a href="#LeetCode对应习题102" class="headerlink" title="LeetCode对应习题102"></a>LeetCode对应习题102</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/<strong></strong></span></span><br><span class="line"><span class="comment"><em> Definition for a binary tree node.</em></span></span><br><span class="line"><span class="comment"> function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"><em>     this.val = val;</em></span></span><br><span class="line"><span class="comment">     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"><em> &#125;</em></span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment">/</span></span><br><span class="line"><span class="comment"><em> @param &#123;TreeNode&#125; root</em></span></span><br><span class="line"><span class="comment"> @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">let</span> queue = [root]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(queue.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> len = queue.length</span><br><span class="line">        <span class="keyword">let</span> current = []</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">let</span> node = queue.shift()</span><br><span class="line">            current.push(node.val)</span><br><span class="line">            <span class="keyword">if</span> (node.left) &#123;</span><br><span class="line">                queue.push(node.left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (node.right) &#123;</span><br><span class="line">                queue.push(node.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res.push(current)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div></div></div>
 <h1 id="配套练习题"><a href="#配套练习题" class="headerlink" title="配套练习题"></a>配套练习题</h1><hr>
 <div class="note primary"><p>树的解法中最好优先思考递归的方法，比较容易写。如果对访问速度有要求时，再思考非递归的方式来使用手动实现栈替代系统栈。</p></div>
 
@@ -609,18 +452,12 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; sum</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> hasPathSum = <span class="function"><span class="keyword">function</span>(<span class="params">root, sum</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">if</span>(!root.left &amp;&amp; !root.right) <span class="keyword">return</span> root.val == sum</span><br><span class="line">    <span class="keyword">return</span> hasPathSum(root.left,sum - root.val) || hasPathSum(root.right,sum - root.val)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
-
-    
-
     
     
     
 
     
 
-    
-      
-    
     
 
     
@@ -629,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/树/" rel="tag"><i class="fa fa-tag"></i> 树</a>
+            <a href="/tags/树/" rel="tag"># 树</a>
           
         </div>
       
@@ -652,7 +489,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/19/动态规划其实也不难/" rel="prev" title="动态规划其实也不难">
+              <a href="/2019/03/22/动态规划其实也不难/" rel="prev" title="动态规划其实也不难">
                 动态规划其实也不难 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -670,15 +507,18 @@
   </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
           </div>
           
 
-  
-    <div class="comments" id="gitalk-container">
-    </div>
+
+          
 
   
 
@@ -697,6 +537,7 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -704,82 +545,60 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
 
-      <div class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="JasonLam">
             
               <p class="site-author-name" itemprop="name">JasonLam</p>
-              <div class="site-description motion-element" itemprop="description">JasonLam个人站，主要用来记录前端知识总结～</div>
+              <p class="site-description motion-element" itemprop="description">JasonLam个人站，主要用来记录前端知识总结～</p>
           </div>
 
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives">
-                
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">posts</span>
-                  </a>
-                </div>
-              
+          <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
               
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">categories</span>
-                  </a>
-                </div>
+                <a href="/archives">
               
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
 
+            
               
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">tags</span>
-                  </a>
-                </div>
               
-            </nav>
-          
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
 
           
             <div class="feed-link motion-element">
@@ -793,50 +612,23 @@
           
 
           
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/JasonLam0990" title="GitHub &rarr; https://github.com/JasonLam0990" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                  
-                    
-                  
-                  <a href="/jasonlam0990@gmail.com" title="E-Mail &rarr; jasonlam0990@gmail.com"><i class="fa fa-fw fa-envelope"></i></a>
-                </span>
-              
-            </div>
-          
-
           
 
           
           
 
-          
-            
-          
           
 
         </div>
-      </div>
+      </section>
 
       
       <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-            
-            
+              
             
 
             
@@ -844,7 +636,7 @@
             
 
           </div>
-        </div>
+        </section>
       <!--/noindex-->
       
 
@@ -852,7 +644,6 @@
 
     </div>
   </aside>
-  
 
 
         
@@ -862,18 +653,16 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+  <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">JasonLam</span>
 
   
-
-  
 </div>
 
 
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -881,13 +670,12 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.0.1</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
 
         
-
 
 
 
@@ -903,21 +691,16 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
-          <span id="scrollpercent"><span>0</span>%</span>
-        
       </div>
     
 
     
 
-    
-
-    
   </div>
 
   
 
-<script>
+<script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -931,14 +714,6 @@
 
 
 
-
-
-
-
-
-
-
-  
   
 
 
@@ -951,452 +726,97 @@
 
 
 
-  
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/three/three.min.js"></script>
-
-  
-  <script src="/lib/three/three-waves.min.js"></script>
-
-
-  
-
-
-  <script src="/js/src/utils.js?v=7.0.1"></script>
-
-  <script src="/js/src/motion.js?v=7.0.1"></script>
-
-
 
   
   
-
-
-  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
-
-
-
-
-  
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
-
-
-
-  
-
-
-  <script src="/js/src/next-boot.js?v=7.0.1"></script>
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
-
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
   
-    
-
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
 
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
 
 
 
+  
 
 
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
-<script>
-  var gitalk = new Gitalk({
-    clientID: 'b9d6c2fd4866fc2e2f16',
-    clientSecret: '27ff5243e576128614a4c8f006878cb504d7e8ab',
-    repo: 'JasonLam0990.github.io',
-    owner: 'JasonLam0990',
-    admin: ['JasonLam0990'],
-    id: md5(location.pathname),
-    
-      language: 'zh-CN',
-    
-    distractionFreeMode: 'true'
-  });
-  gitalk.render('gitalk-container');
-</script>
+
+
+  
+
 
   
 
 
 
 
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+	
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-
-
-
-
-
-
-
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
-
-<script>
-  var gitalk = new Gitalk({
-    clientID: 'b9d6c2fd4866fc2e2f16',
-    clientSecret: '27ff5243e576128614a4c8f006878cb504d7e8ab',
-    repo: 'JasonLam0990.github.io',
-    owner: 'JasonLam0990',
-    admin: ['JasonLam0990'],
-    id: md5(location.pathname),
-    
-      language: 'zh-CN',
-    
-    distractionFreeMode: 'true'
-  });
-  gitalk.render('gitalk-container');
-</script>
 
 
   
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
-      
+  
 
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
 
-                // show search results
 
-                if (isMatch) {
-                  // sort index by position of keyword
 
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
 
-                  // merge hits into slices
 
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
 
-                      // move to next position of hit
 
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
 
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
 
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
 
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
+  
 
 
 
@@ -1409,54 +829,9 @@
   
 
   
-
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-<script>
-  $('.highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('Copy');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
 
   
 
