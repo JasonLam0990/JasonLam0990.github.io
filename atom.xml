@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="JasonLam0990.github.io/"/>
-  <updated>2019-03-21T16:28:21.451Z</updated>
+  <updated>2019-03-22T10:02:12.994Z</updated>
   <id>JasonLam0990.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP 与 HTTPS 必知必会</title>
+    <link href="JasonLam0990.github.io/2019/03/22/HTTP-%E4%B8%8E-HTTPS%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/"/>
+    <id>JasonLam0990.github.io/2019/03/22/HTTP-与-HTTPS必知必会/</id>
+    <published>2019-03-22T00:15:24.000Z</published>
+    <updated>2019-03-22T10:02:12.994Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="HTTP-和-HTTPS-的基本概念"><a href="#HTTP-和-HTTPS-的基本概念" class="headerlink" title="HTTP 和 HTTPS 的基本概念"></a>HTTP 和 HTTPS 的基本概念</h1><div class="tabs" id><ul class="nav-tabs"><li class="tab active"><a href="#-1">HTTP</a></li><li class="tab"><a href="#-2">HTTPS</a></li></ul><div class="tab-content"><div class="tab-pane active" id="-1"><h2 id="HTTP主要特点"><a href="#HTTP主要特点" class="headerlink" title="HTTP主要特点"></a>HTTP主要特点</h2><p>超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p><ul><li>明文传输，不适合传输一些敏感信息，比如：信用卡号、密码等支付信息</li><li>不验证通信方的身份, 因此有可能遭遇伪装</li><li>无法证明报文的完整性, 所有有可能已遭篡改</li><li>HTTP是无状态协议，意味着服务器不会在两个请求之间保留任何数据（状态）</li><li>默认端口为80</li></ul><h2 id="HTTP的工作原理"><a href="#HTTP的工作原理" class="headerlink" title="HTTP的工作原理"></a>HTTP的工作原理</h2></div><div class="tab-pane" id="-2"><h2 id="HTTPS主要特点"><a href="#HTTPS主要特点" class="headerlink" title="HTTPS主要特点"></a>HTTPS主要特点</h2><p>HTTPS 经由 HTTP 进行通信，但利用 SSL/TLS 来加密数据包。HTTPS 开发的主要目的，是提供对网站服务器的身份认证，保护交换数据的隐私与完整性。</p><ul><li>数据传输过程是加密的，安全性较好</li><li>使用 HTTPS 协议需要到 CA（Certificate Authority，数字证书认证机构） 申请证书，一般免费证书较少，因而需要一定费用。</li><li>HTTP 页面响应速度比 HTTPS 快，主要是因为 HTTP 使用 TCP 三次握手建立连接，客户端和服务器需要交换 3 个包，而 HTTPS除了 TCP 的三个包，还要加上 ssl 握手需要的 9 个包，所以一共是 12 个包。</li><li>默认端口为443</li></ul><p>HTTPS 默认工作在 TCP 协议443端口，它的工作流程一般如以下方式：</p><p>1、TCP 三次同步握手<br>2、客户端验证服务器数字证书<br>3、DH 算法协商对称加密算法的密钥、hash 算法的密钥<br>4、SSL 安全加密隧道协商完成<br>5、网页以加密的方式传输，用协商的对称加密算法和密钥加密，保证数据机密性；用协商的hash算法进行数据完整性保护，保证数据不被篡改。</p><p>因此, 如果是非敏感信息则使用HTTP通信, 只有在包括个人信息等敏感数据时, 才利用HTTPS加密通信, 以节省资源. </p><h2 id="HTTPS的工作原理"><a href="#HTTPS的工作原理" class="headerlink" title="HTTPS的工作原理"></a>HTTPS的工作原理</h2></div></div></div>]]></content>
+    
+    <summary type="html">
+    
+      HTTP与HTTPS的相关内容都是非常基础且重要的问题，如果能较好的掌握，在开发中或者面试时，遇到各种问题都能比较从容的应对。本文将详细的讲解HTTP与HTTPS的相关概念，以及记录一些在面试中遇到的相关问题。
+    
+    </summary>
+    
+      <category term="计算机网络" scheme="JasonLam0990.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="HTTP &amp; HTTPS" scheme="JasonLam0990.github.io/tags/HTTP-HTTPS/"/>
+    
+  </entry>
   
   <entry>
     <title>动态规划其实也不难</title>
