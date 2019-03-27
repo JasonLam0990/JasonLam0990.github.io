@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="HTTP & HTTPS,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JasonLam's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="无论是日常Web开发中，还是面试中，熟练掌握基础的计算机网络知识是非常必要的，说到网络基础，当然绕不开HTTP与HTTPS了，他们的区别，发起请求的过程等等，接下来就由我给你娓娓道来～">
+<meta name="keywords" content="HTTP &amp; HTTPS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Http与Https的区别及其过程">
+<meta property="og:url" content="JasonLam0990.github.io/2019/03/27/Http与Https必知必会/index.html">
+<meta property="og:site_name" content="JasonLam&#39;s Blog">
+<meta property="og:description" content="无论是日常Web开发中，还是面试中，熟练掌握基础的计算机网络知识是非常必要的，说到网络基础，当然绕不开HTTP与HTTPS了，他们的区别，发起请求的过程等等，接下来就由我给你娓娓道来～">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2014/bg2014092003.png">
+<meta property="og:updated_time" content="2019-03-27T12:32:02.125Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Http与Https的区别及其过程">
+<meta name="twitter:description" content="无论是日常Web开发中，还是面试中，熟练掌握基础的计算机网络知识是非常必要的，说到网络基础，当然绕不开HTTP与HTTPS了，他们的区别，发起请求的过程等等，接下来就由我给你娓娓道来～">
+<meta name="twitter:image" content="http://www.ruanyifeng.com/blogimg/asset/2014/bg2014092003.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="JasonLam0990.github.io/2019/03/27/Http与Https必知必会/">
+
+
+
+
+
+  <title>Http与Https的区别及其过程 | JasonLam's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JasonLam's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Just Enjoy It!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="JasonLam0990.github.io/2019/03/27/Http与Https必知必会/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JasonLam">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JasonLam's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Http与Https的区别及其过程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T10:07:14+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  无论是日常Web开发中，还是面试中，熟练掌握基础的计算机网络知识是非常必要的，说到网络基础，当然绕不开HTTP与HTTPS了，他们的区别，发起请求的过程等等，接下来就由我给你娓娓道来～
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><p>HTTP（Hyper Text Transfer Protocol，超文本传输协议），主要被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p>
+<h2 id="HTTP的特点"><a href="#HTTP的特点" class="headerlink" title="HTTP的特点"></a>HTTP的特点</h2><ul>
+<li>默认采用80作为通讯端口</li>
+<li>HTTP是<strong>无状态</strong>的，即同一个客户端第二次访问同一个服务器上的页面时，服务器无法知道这个客户端曾经访问过，服务器也无法分辨不同的客户端。HTTP 的无状态特性简化了服务器的设计，使服务器更容易支持大量并发的HTTP请求。（如果希望保持状态，可以通过引入cookie和session）</li>
+<li>HTTP是<strong>无连接</strong>的，即限制每次连接只处理一个请求。服务器处理完客户的请求并响应后，就断开连接。采用这种方式可以节省传输时间，同时可以尽快将服务器资源释放出来服务其他的客户端。</li>
+</ul>
+<h2 id="HTTP的缺点"><a href="#HTTP的缺点" class="headerlink" title="HTTP的缺点"></a>HTTP的缺点</h2><ul>
+<li>窃听风险：HTTP所封装的信息是明文的，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息</li>
+<li>篡改风险：无法证明报文的完整性, 攻击者可能已经截获并对报文进行了修改。</li>
+<li>冒充风险：客户端与服务器之间没有任何身份确认的过程，无法保证通信双方的身份，攻击者可以冒充他人身份参与通信。</li>
+</ul>
+<hr>
+<h1 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h1><p>HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer），可以理解为HTTP+SSL/TLS， 即 <strong>HTTPS是运行在SSL/TLS之上的HTTP协议</strong>。HTTPS是可以进行加密传输、报文完整性校验、身份认证的网络协议，比HTTP协议要更加安全。</p>
+<p>引用《图解HTTP》中的话来说：<strong>HTTP+加密+认证+完整性保护=HTTPS</strong></p>
+<h2 id="HTTPS的特点"><a href="#HTTPS的特点" class="headerlink" title="HTTPS的特点"></a>HTTPS的特点</h2><ul>
+<li>默认采用443作为通讯端口</li>
+<li>所有信息都是加密传播，第三方无法窃听</li>
+<li>具有校验机制，一旦被篡改，通信双方会立刻发现</li>
+<li>配备身份证书，可防止身份被冒充</li>
+</ul>
+<h2 id="HTTPS的缺点"><a href="#HTTPS的缺点" class="headerlink" title="HTTPS的缺点"></a>HTTPS的缺点</h2><ul>
+<li>HTTPS的页面响应速度比HTTP要慢，主要是因为HTTPS在HTTP的基础上还需要进行一系列的加解密过程，这个过程会需要一定的时间</li>
+<li>HTTPS涉及到的安全算法会消耗 CPU 资源，会增加服务器的负担</li>
+<li>使用 HTTPS 协议需要到 CA（Certificate Authority，数字证书认证机构） 申请证书，一般免费证书较少，因而需要一定费用。（如果全站升HTTPS了，相应的CDN也需要使用HTTPS的，价格也会比HTTP的要贵一些）</li>
+</ul>
+<hr>
+<h1 id="HTTPS的原理"><a href="#HTTPS的原理" class="headerlink" title="HTTPS的原理"></a>HTTPS的原理</h1><p>SSL/TLS协议的基本思路是采用公钥加密法，也就是说，客户端先向服务器端索要公钥，然后用公钥加密信息，服务器收到密文后，用自己的私钥解密。但同时为了减少耗用的时间，HTTPS 采用共享密钥加密（对称加密）和公开密钥加密（非对称加密）两者并用的混合加密机制。</p>
+<p>总的来说就是三步：<br>（1） 客户端向服务器端索要并验证公钥。<br>（2） 双方协商生成”对话密钥”。<br>（3） 双方采用”对话密钥”进行加密通信。</p>
+<p>Question &amp; Answer<br>（1）如何保证公钥不被篡改？<br>    解决方法：将公钥放在数字证书中。只要证书是可信的，公钥就是可信的。<br>（2）公钥加密计算量太大，如何减少耗用的时间？<br>    每一次对话（session），客户端和服务器端都生成一个”对话密钥”（session key），用它来加密信息。由于”对话密钥”是对称加密，所以运算速度非常快，而服务器公钥只用于加密”对话密钥”（session key）本身，这样就减少了加密运算的消耗时间。</p>
+<h2 id="一起理清几个概念"><a href="#一起理清几个概念" class="headerlink" title="一起理清几个概念"></a>一起理清几个概念</h2><ul>
+<li>对称加密：加密和解密都是使用的同一个密钥（DES、AES-GCM算法等）</li>
+<li>非对称加密：加密使用的密钥和解密使用的密钥是不相同的，分别称为：公钥、私钥，公钥和算法都是公开的，而私钥是保密的。非对称加密算法性能较低，但是安全性比较强，由于其加密特性，非对称加密算法能加密的数据长度也是有限的（RSA、DSA算法等）</li>
+<li>哈希算法：将任意长度的信息转换为较短的固定长度的值，通常其长度要比信息小得多，且算法不可逆（MD5、SHA-1算法等）</li>
+<li>数字签名：数字签名就是在待传送的信息后面再加上一段内容（待传送的信息经过hash后的值），hash值一般都会加密后（也就是数字签名）再和信息一起发送，以保证这个hash值不被修改，以此证明信息没有被修改过。</li>
+<li>生成”对话密钥”(session key)一共需要三个随机数。</li>
+<li>服务器的公钥和私钥只在加密和解密”对话密钥”（非对称加密）时使用，握手之后的对话使用”对话密钥”(session key)加密（对称加密），不会再使用到服务器的公钥和私钥了。</li>
+<li>服务器公钥(public key)放在服务器的数字证书之中。</li>
+</ul>
+<h1 id="SSL握手详细的步骤"><a href="#SSL握手详细的步骤" class="headerlink" title="SSL握手详细的步骤"></a>SSL握手详细的步骤</h1><p><img src="http://www.ruanyifeng.com/blogimg/asset/2014/bg2014092003.png" alt="图来自与阮一峰博客"></p>
+<p>1.(ClientHello)客户端向服务器发起HTTPS请求，连接到服务器的443端口。在这一步，客户端主要向服务器提供以下信息。</p>
+<ul>
+<li>客户端支持的协议版本，比如TLS 1.0版</li>
+<li>客户端支持的加密方法，比如RSA公钥加密</li>
+<li>客户端支持的压缩方法</li>
+<li>一个客户端生成的随机数(public random)，稍后用于生成”对话密钥”(session key)</li>
+</ul>
+<p>2.(SeverHello)服务器收到客户端请求后，向客户端发出回应，回应包含以下内容</p>
+<ul>
+<li>确认使用的加密通信协议版本，比如TLS 1.0版本。如果浏览器与服务器支持的版本不一致，服务器关闭加密通信。</li>
+<li>确认使用的加密方法，比如RSA公钥加密</li>
+<li>服务器证书(证书中包含了服务器公钥public key)</li>
+<li>一个服务器生成的随机数(server random)，稍后用于生成”对话密钥”(session key)</li>
+</ul>
+<p>3.客户端收到服务器回应以后，首先验证服务器证书。如果证书不是可信机构颁布、或者证书中的域名与实际域名不一致、或者证书已经过期，就会向访问者显示一个警告，由其选择是否还要继续通信。<br>如果证书没有问题，客户端就会从证书中取出服务器的公钥(public key)。然后，生成一个随机数，我们将该随机数称之为client key，即客户端密钥。该随机数(client key)用服务器公钥(public key)进行非对称加密，这样客户端密钥(client key)就变成密文了，可以防止被窃听。此时，客户端会发起HTTPS中的第二个HTTP请求，将加密之后的客户端密钥(client key)发送给服务器。</p>
+<p>4.服务器收到加密之后的客户端密钥(client key)之后，会用自己的服务器私钥对其进行非对称解密，解密之后的明文就是客户端密钥(client key)。有了它以后，客户端和服务器就同时都有了三个随机数(public random,server random,client key)，接着双方就用事先商定的加密方法，各自生成本次会话所用的同一把”会话密钥”(session key)</p>
+<p>5.之后客户端与服务器的通信都使用”会话密钥”(session key)对需要传输的数据进行对称加解密，这样要传输的数据就变成了密文，第三方无法窃听。</p>
+<p>至此，整个握手阶段全部结束。接下来，客户端与服务器进入加密通信，就完全是使用普通的HTTP协议，只不过用”会话密钥”(session key)加密了需要传输的内容。</p>
+<p>整个握手阶段都不加密（也没法加密），都是明文的。因此，如果有人窃听通信，他可以知道双方选择的加密方法，以及三个随机数中的两个。整个通话的安全，只取决于第三个随机数(client key)能不能被破解。</p>
+<hr>
+<p>参考文章：<br>《图解SSL/TLS协议》<a href="http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html</a><br>《SSL/TLS协议运行机制的概述》<a href="http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html</a><br>《HTTPS理论基础及其在Android中的最佳实践》<a href="https://blog.csdn.net/iispring/article/details/51615631" target="_blank" rel="noopener">https://blog.csdn.net/iispring/article/details/51615631</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTTP-HTTPS/" rel="tag"># HTTP & HTTPS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/22/动态规划其实也不难/" rel="next" title="动态规划其实也不难">
+                <i class="fa fa-chevron-left"></i> 动态规划其实也不难
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="JasonLam">
+            
+              <p class="site-author-name" itemprop="name">JasonLam</p>
+              <p class="site-description motion-element" itemprop="description">JasonLam个人站，主要用来记录前端知识总结～</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP"><span class="nav-number">1.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP的特点"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP的缺点"><span class="nav-number">1.2.</span> <span class="nav-text">HTTP的缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTPS"><span class="nav-number">2.</span> <span class="nav-text">HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS的特点"><span class="nav-number">2.1.</span> <span class="nav-text">HTTPS的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS的缺点"><span class="nav-number">2.2.</span> <span class="nav-text">HTTPS的缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTPS的原理"><span class="nav-number">3.</span> <span class="nav-text">HTTPS的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一起理清几个概念"><span class="nav-number">3.1.</span> <span class="nav-text">一起理清几个概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL握手详细的步骤"><span class="nav-number">4.</span> <span class="nav-text">SSL握手详细的步骤</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JasonLam</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="BbeiAn-info">
+   	Jason技术分享小栈 -
+	  <a target="_blank" href="http://www.miitbeian.gov.cn/" style="color:#f0d784;text-decoration:none;padding-left:22px;background:url(https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">粤ICP备 18028420号-1</a>	  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+</div>
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
